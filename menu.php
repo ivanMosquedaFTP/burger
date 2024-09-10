@@ -8,7 +8,7 @@
 
   echo "<pre>";
   print_r($hamburguesas);
-  die();
+  /*die();*/
 ?>
 <!doctype html>
 <html lang="en">
@@ -116,26 +116,20 @@
         </section>
 
         <section>
-
-            <div class="col-md-3">
-              <div class="card" style="width: auto;">
-                <img src="images/2.jpeg" class="card-img-top" alt="Hamburguesa lite" height="300">
-                <div class="card-body">
-                  <h5 class="card-title">Hamburguesa lite</h5>
-                  <p class="card-text">Hamburguesa para gente que quiere un balance de nutrición y sabor.</p>
+          <div class="row">
+            <?php
+              foreach($hamburguesas as $hamburguesa):
+                <div class="col-md-3">
+                  <div class="card" style="width: auto;">
+                    <img src="images/3.jpg" class="card-img-top" alt="Hamburguesa con papas" height="300">
+                    <div class="card-body">
+                      <h5 class="card-title">Hamburguesa con papas</h5>
+                      <p class="card-text">Combo de hamburguesa con papas grandes.</p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <div class="card" style="width: auto;">
-                <img src="images/4.jpeg" class="card-img-top" alt="Doble hamburguesa" height="300">
-                <div class="card-body">
-                  <h5 class="card-title">Doble hamburguesa</h5>
-                  <p class="card-text">Combo de dos Hamburguesas, para compartir</p>
-                </div>
-              </div>
-            </div>
+              endforeach;
+            ?>
           </div>
 
           <div class="row">
