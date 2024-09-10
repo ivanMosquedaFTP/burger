@@ -40,7 +40,7 @@
   <header>
     <div class="menu_sitbar di_mr01">
       <div class="logo">
-        <a href="index.html"><img src="images/logo.svg" alt="#" width="50" height="50"></a>
+        <a href="index.php"><img src="images/logo.svg" alt="#" width="50" height="50"></a>
       </div>
       <nav class="navigation navbar navbar-expand-md navbar-dark ">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05"
@@ -50,16 +50,16 @@
         <div class="collapse navbar-collapse" id="navbarsExample05">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="index.html">Inicio</a>
+              <a class="nav-link" href="index.php">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="historia.html">Acerca</a>
+              <a class="nav-link" href="historia.php">Acerca</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="menu.html">Comprar</a>
+              <a class="nav-link" href="menu.php">Comprar</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contactanos</a>
+              <a class="nav-link" href="contact.php">Contactanos</a>
             </li>
           </ul>
         </div>
@@ -73,7 +73,7 @@
               <div class="full">
                 <div class="center-desk">
                   <div class="logo">
-                    <a href="index.html"><img src="images/logo.svg" alt="#" width="50" height="50" /></a>
+                    <a href="index.php"><img src="images/logo.svg" alt="#" width="50" height="50" /></a>
                   </div>
                 </div>
               </div>
@@ -87,16 +87,16 @@
                 <div class="collapse navbar-collapse" id="navbarsExample04">
                   <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                      <a class="nav-link" href="index.html">Inicio</a>
+                      <a class="nav-link" href="index.php">Inicio</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="historia.html">Acerca</a>
+                      <a class="nav-link" href="historia.php">Acerca</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="menu.html">Comprar</a>
+                      <a class="nav-link" href="menu.php">Comprar</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="contact.html">Contacto</a>
+                      <a class="nav-link" href="contact.php">Contacto</a>
                     </li>
                   </ul>
                 </div>
@@ -147,7 +147,7 @@
                               </h3>
                               <p>Llevamos mucho tiempo en este negocio, venga y compruebe usted mismo lo que hemos
                                 aprendido</p>
-                              <a class="read_more" href="contact.html">Contacto </a>
+                              <a class="read_more" href="contact.php">Contacto </a>
                             </div>
                           </div>
                         </div>
@@ -164,7 +164,7 @@
                               </h3>
                               <p>Tenemos suculentas especialidades desarrolladas en casa, nunca ha probado algo como lo
                                 que le podemos ofrecer</p>
-                              <a class="read_more" href="menu.html">Comprar </a>
+                              <a class="read_more" href="menu.php">Comprar </a>
                             </div>
                           </div>
                         </div>
@@ -276,10 +276,10 @@
             <div class="infoma">
               <h3>Enlaces</h3>
               <ul class="fullink">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="historia.html">Acerca</a></li>
-                <li><a href="menu.html">Comprar</a></li>
-                <li><a href="contact.html">Contacto</a></li>
+                <li><a href="index.php">Inicio</a></li>
+                <li><a href="historia.php">Acerca</a></li>
+                <li><a href="menu.php">Comprar</a></li>
+                <li><a href="contact.php">Contacto</a></li>
               </ul>
             </div>
           </div>
