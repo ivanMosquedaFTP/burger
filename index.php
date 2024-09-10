@@ -1,5 +1,3 @@
-<?php
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -310,6 +308,7 @@
           <div class="row">
             <div class="col-md-12">
               <p>© 2024 Todos los derechos reservados. <a href="https://html.design/"> Lynx Burger</a></p>
+              <?php date_default_timezone_set('America/Mexico_city'); echo date('l jS \of F Y h:i:s A')?>
             </div>
           </div>
         </div>

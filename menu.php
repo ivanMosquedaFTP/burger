@@ -1,3 +1,15 @@
+<?php
+  $hamburguesas=array(
+    array("id"=>1, "nombre"=>"Gourmet", "Descripcion"=>"Hamburguesa gourmet para gente que busca un balance entre el sabor y la calidad, todo en un increíble valor.", "Precio"=>"60", "URL"=>"", "Imagen"=>"images/1.png"),
+    array("id"=>2, "nombre"=>"Lite", "Descripcion"=>"Hamburguesa para gente que quiere un balance de nutrición y sabor.", "Precio"=>"60", "URL"=>"", "Imagen"=>"images/2.jpeg"),
+    array("id"=>3, "nombre"=>"Con papas", "Descripcion"=>"Combo de hamburguesa con papas grandes.", "Precio"=>"60", "URL"=>"", "Imagen"=>"images/3.jpg"),
+    array("id"=>4, "nombre"=>"Doble hamburguesa", "Descripcion"=>"Combo de dos Hamburguesas, para compartir", "Precio"=>"60", "URL"=>"", "Imagen"=>"images/4.jpeg"),
+  );
+
+  echo "<pre>";
+  print_r($hamburguesas);
+  die();
+?>
 <!doctype html>
 <html lang="en">
 
@@ -104,17 +116,6 @@
         </section>
 
         <section>
-          <div class="row">
-            <div class="col-md-3">
-              <div class="card" style="width: auto;">
-                <img src="images/1.png" class="card-img-top" alt="Hamburguesa gourmet" height="300">
-                <div class="card-body">
-                  <h5 class="card-title">Hamburguesa gourmet</h5>
-                  <p class="card-text">Hamburguesa gourmet para gente que busca un balance entre el sabor y la calidad,
-                    todo en un increíble valor.</p>
-                </div>
-              </div>
-            </div>
 
             <div class="col-md-3">
               <div class="card" style="width: auto;">
@@ -122,16 +123,6 @@
                 <div class="card-body">
                   <h5 class="card-title">Hamburguesa lite</h5>
                   <p class="card-text">Hamburguesa para gente que quiere un balance de nutrición y sabor.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <div class="card" style="width: auto;">
-                <img src="images/3.jpg" class="card-img-top" alt="Hamburguesa con papas" height="300">
-                <div class="card-body">
-                  <h5 class="card-title">Hamburguesa con papas</h5>
-                  <p class="card-text">Combo de hamburguesa con papas grandes.</p>
                 </div>
               </div>
             </div>
