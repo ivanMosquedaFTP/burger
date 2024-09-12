@@ -1,16 +1,23 @@
 <?php
-  $hamburguesas=array(
-    array("id"=>1, "nombre"=>"Gourmet", "Descripcion"=>"Hamburguesa gourmet para gente que busca un balance entre el sabor y la calidad, todo en un increíble valor.", "Precio"=>"60", "URL"=>"", "Imagen"=>"images/1.png"),
-    array("id"=>2, "nombre"=>"Lite", "Descripcion"=>"Hamburguesa para gente que quiere un balance de nutrición y sabor.", "Precio"=>"60", "URL"=>"", "Imagen"=>"images/2.jpeg"),
-    array("id"=>3, "nombre"=>"Con papas", "Descripcion"=>"Combo de hamburguesa con papas grandes.", "Precio"=>"60", "URL"=>"", "Imagen"=>"images/3.jpg"),
-    array("id"=>4, "nombre"=>"Doble hamburguesa", "Descripcion"=>"Combo de dos Hamburguesas, para compartir", "Precio"=>"60", "URL"=>"", "Imagen"=>"images/4.jpeg"),
-  );
+  $hamburguesas = array();
+  $user = "burger";
+  $passwd = "1234";
 
-  echo "<pre>";
-  print_r($hamburguesas);
+  $mdb = new PDO('mysql:host=localhost;dbname=burger', $user, $passwd);
+
+  $gsent = $mdb->prepare("SELECT id,nombre,descripcion,precio,imagen FROM hamburguesa");
+  $gsent->execute();
+
+  $hamburguesas = $gsent->fetchAll(PDO::FETCH_ASSOC);
+
+  /*echo "<pre>";*/
+  /*print_r($hamburguesas);*/
+  /*foreach($hamburguesas as $hamburguesa) {*/
+  /*  echo($hamburguesa['nombre']);*/
+  /*}*/
   /*die();*/
 ?>
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -118,62 +125,18 @@
         <section>
           <div class="row">
             <?php
-              foreach($hamburguesas as $hamburguesa):
+              foreach($hamburguesas as $hamburguesa): ?>
                 <div class="col-md-3">
                   <div class="card" style="width: auto;">
-                    <img src="images/3.jpg" class="card-img-top" alt="Hamburguesa con papas" height="300">
+                  <img src="<?php echo($hamburguesa['imagen']); ?>" class="card-img-top" alt="<?php echo($hamburguesa['descripcion']); ?>" height="300">
                     <div class="card-body">
-                      <h5 class="card-title">Hamburguesa con papas</h5>
-                      <p class="card-text">Combo de hamburguesa con papas grandes.</p>
+                    <h5 class="card-title"><?php echo($hamburguesa['nombre']);?></h5>
+                    <p class="card-text"><?php echo($hamburguesa['descripcion']);?></p>
+                    <p class="card-text"><?php echo($hamburguesa['precio']);?></p>
                     </div>
                   </div>
                 </div>
-              endforeach;
-            ?>
-          </div>
-
-          <div class="row">
-            <div class="col-md-12"></div>
-          </div>
-
-          <div class="row">
-            <div class="col-md-3">
-              <div class="card" style="width: auto;">
-                <img src="images/5.jpg" class="card-img-top" alt="Hamburguesa con extra queso" height="300">
-                <div class="card-body">
-                  <h5 class="card-title">Hamburguesa con extra queso</h5>
-                  <p class="card-text">Hamburguesa para gente amante del queso, esta hamburguesa viene con varios tipos
-                    de queso</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="card" style="width: auto;">
-                <img src="images/6.jpg" class="card-img-top" alt="Hamburguesa rodeo" height="300">
-                <div class="card-body">
-                  <h5 class="card-title">Hamburguesa rodeo</h5>
-                  <p class="card-text">Hamburguesa con aros de cebolla</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="card" style="width: auto;">
-                <img src="images/7.jpg" class="card-img-top" alt="Hamburguesa campestre" height="300">
-                <div class="card-body">
-                  <h5 class="card-title">Hamburguesa campestre</h5>
-                  <p class="card-text">Hamburguesa rustica para gente que le gustan los outdoors</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="card" style="width: auto;">
-                <img src="images/8.jpg" class="card-img-top" alt="Hamburguesa clasica" height="300">
-                <div class="card-body">
-                  <h5 class="card-title">Hamburguesa clasica</h5>
-                  <p class="card-text">Hamburguesa con el sabor clasico de nuestro nicho</p>
-                </div>
-              </div>
-            </div>
+              <?php endforeach; ?>
           </div>
         </section>
       </main>
