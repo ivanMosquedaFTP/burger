@@ -2,7 +2,6 @@
   $hamburguesas = array();
   $user = "burger";
   $passwd = "1234";
-  echo"salaverga compadre"
 
   $mdb = new PDO('mysql:host=localhost;dbname=burger', $user, $passwd);
 
